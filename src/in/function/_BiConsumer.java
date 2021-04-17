@@ -18,12 +18,14 @@ public class _BiConsumer {
 
 	}
 
-	static BiConsumer<ConsumerModel, Boolean> greetConsumerFunction = (consumer, showPhoneNumber) -> System.out
-			.println("Hello " + consumer.consumerName + ", thanks for registering on "
+	static BiConsumer<ConsumerModel, Boolean> greetConsumerFunction = (consumer,
+			showPhoneNumber) -> System.out.println("Hello "
+					+ consumer.consumerName + ", thanks for registering on "
 					+ (showPhoneNumber ? consumer.consumerPhone : "******"));
 
 	static void greetConsumer(ConsumerModel consumer, Boolean showPhoneNumber) {
-		System.out.println("Hello " + consumer.consumerName + ", thanks for registering on "
+		System.out.println("Hello " + consumer.consumerName
+				+ ", thanks for registering on "
 				+ (showPhoneNumber ? consumer.consumerPhone : "******"));
 	}
 
