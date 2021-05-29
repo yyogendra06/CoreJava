@@ -8,6 +8,8 @@ package in.thread;
  *
  */
 public class JoinThreadApp {
+	static int counter = 1;
+
 	public static void main(String[] args) throws InterruptedException {
 
 		Runnable medicalRunnable = () -> {
@@ -42,15 +44,30 @@ public class JoinThreadApp {
 
 		Thread medicalThread = new Thread(medicalRunnable);
 		medicalThread.start();
-		medicalThread.join();
+//		medicalThread.join();
 
 		Thread testDriverThread = new Thread(testDriverRunnable);
 		testDriverThread.start();
-		testDriverThread.join();
+//		testDriverThread.join();
 
 		Thread officerSignThread = new Thread(officerSignRunnable);
 		officerSignThread.start();
-		officerSignThread.join();
+//		officerSignThread.join();
+
+		Thread t1 = new Thread(() -> {
+				JoinThreadApp.counter++;
+		});
+		
+		Thread t2 = new Thread(() -> {
+				JoinThreadApp.counter++;
+		});
+
+		t1.start();
+		t2.start();
+//		t1.join();
+//		t2.join();
+
+		System.out.println(JoinThreadApp.counter);
 
 	}
 }
