@@ -1,4 +1,4 @@
-package in.thread;
+package in.thread.synchronization;
 
 class TotalEarning implements Runnable {
 

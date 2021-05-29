@@ -1,4 +1,4 @@
-package in.thread;
+package in.thread.synchronization;
 
 /**
  * To Avoid Thread issue at Class Level static synchronization to be used.

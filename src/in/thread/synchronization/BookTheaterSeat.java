@@ -1,4 +1,4 @@
-package in.thread;
+package in.thread.synchronization;
 
 /**
  * This Contains method
@@ -19,6 +19,7 @@ package in.thread;
 public class BookTheaterSeat {
 
 	int totalSeats = 10;
+
 	void bookSeat(int seats) {
 		if (totalSeats >= seats) {
 			System.out.println("Seats Booked Successfully..");
@@ -129,26 +130,22 @@ class MainApp {
 		MovieTheater sureshBooking = new MovieTheater(bookTheaterSeat, 6);
 		new Thread(sureshBooking).start();
 
-		// Now Synchronized Method used
+		// Synchronized Method used
 		BookTheaterSeat bookTheaterSeatSyncMethod = new BookTheaterSeat();
 
-		SyncMethodMovieTheater deepakSyncMethodBooking = new SyncMethodMovieTheater(
-				bookTheaterSeatSyncMethod, 7);
+		SyncMethodMovieTheater deepakSyncMethodBooking = new SyncMethodMovieTheater(bookTheaterSeatSyncMethod, 7);
 		new Thread(deepakSyncMethodBooking).start();
 
-		SyncMethodMovieTheater sureshSyncMethodBooking = new SyncMethodMovieTheater(
-				bookTheaterSeatSyncMethod, 6);
+		SyncMethodMovieTheater sureshSyncMethodBooking = new SyncMethodMovieTheater(bookTheaterSeatSyncMethod, 6);
 		new Thread(sureshSyncMethodBooking).start();
 
-		// Now Synchronized Method used
+		// Synchronized Block used
 		BookTheaterSeat bookTheaterSeatSyncBlock = new BookTheaterSeat();
 
-		SyncBlockMovieTheater deepakSyncBlockBooking = new SyncBlockMovieTheater(
-				bookTheaterSeatSyncBlock, 7);
+		SyncBlockMovieTheater deepakSyncBlockBooking = new SyncBlockMovieTheater(bookTheaterSeatSyncBlock, 7);
 		new Thread(deepakSyncBlockBooking).start();
 
-		SyncBlockMovieTheater sureshSyncBlockBooking = new SyncBlockMovieTheater(
-				bookTheaterSeatSyncBlock, 6);
+		SyncBlockMovieTheater sureshSyncBlockBooking = new SyncBlockMovieTheater(bookTheaterSeatSyncBlock, 6);
 		new Thread(sureshSyncBlockBooking).start();
 
 	}
