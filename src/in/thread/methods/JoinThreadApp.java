@@ -1,4 +1,4 @@
-package in.thread;
+package in.thread.methods;
 
 /**
  * Till Medical Completition other thread need to wait and join after that

@@ -1,5 +1,9 @@
 package in.thread;
 
+import in.thread.player.PictureTask;
+import in.thread.player.ProgressBarTask;
+import in.thread.player.VideoTask;
+
 public class PriorityThreadApp {
 	public static void main(String[] args) {
 

@@ -6,11 +6,10 @@ class TotalEarning implements Runnable {
 
 	@Override
 	public void run() {
-		for (int i = 0; i < 10; i++) {
-			total += i;
+		for (int i = 0; i < 100000; i++) {
+			total = 100 + i;
 		}
 	}
-
 }
 
 class TotalEarningCommunication implements Runnable {
@@ -23,19 +22,12 @@ class TotalEarningCommunication implements Runnable {
 
 			// this will make main thread which is waiting to wake and release
 			// this lock
-			try {
-				for (int i = 0; i < 10; i++) {
-					total = 100 + i;
-
-					Thread.sleep(500);
-				}
-			} catch (InterruptedException e) {
-				e.printStackTrace();
+			for (int i = 0; i <= 10000; i++) {
+				total = 100 + i;
 			}
 			this.notify();
 		}
 	}
-
 }
 
 public class InterThreadCommunicationApp {
@@ -52,11 +44,9 @@ public class InterThreadCommunicationApp {
 		earnCommThread.start();
 
 		synchronized (earnCommThread) {
-
-			// This will make main thread to wait and other thread to ececute
+			// This will make main thread to wait and other thread to execute
 			earnCommThread.wait();
-			System.out.println(
-					"Total Communication Earning : " + tec.total + ".Rs");
+			System.out.println("Total Communication Earning : " + tec.total + ".Rs");
 		}
 
 	}

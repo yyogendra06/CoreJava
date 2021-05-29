@@ -1,4 +1,6 @@
-package in.thread;
+package in.thread.methods;
+
+import in.thread.player.VideoTask;
 
 public class DaemonThreadApp {
 	public static void main(String[] args) {
