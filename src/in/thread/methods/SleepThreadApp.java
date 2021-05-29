@@ -1,4 +1,4 @@
-package in.thread;
+package in.thread.methods;
 
 class SleepThread implements Runnable {
 

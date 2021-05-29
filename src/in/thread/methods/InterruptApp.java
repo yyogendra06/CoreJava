@@ -1,4 +1,4 @@
-package in.thread;
+package in.thread.methods;
 
 public class InterruptApp {
 	public static void main(String[] args) {

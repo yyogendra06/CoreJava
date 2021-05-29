@@ -1,4 +1,4 @@
-package in.thread;
+package in.thread.player;
 
 public class VideoTask implements Runnable {
 
