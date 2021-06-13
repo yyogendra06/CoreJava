@@ -22,7 +22,7 @@ public class PrivateStaticVariableApp {
 		Test.setCount(2);
 		Test.publicCount++;
 
-		System.out.println("PRivate Count : " + Test.getCount());
+		System.out.println("Private Count : " + Test.getCount());
 		System.out.println("Public Count : " + Test.publicCount);
 	}
 }

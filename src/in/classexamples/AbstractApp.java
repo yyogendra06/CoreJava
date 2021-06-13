@@ -1,4 +1,10 @@
-package in.abstractexamples;
+package in.classexamples;
+
+abstract class AbstractClass {
+	public void nonAbstractDisplay() {
+		System.out.println("Inside nonAbstractDisplay");
+	}
+}
 
 /**
  * Implementation of Abstract Class so that we can use it

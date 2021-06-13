@@ -13,7 +13,6 @@ class ParentInitClass extends InitClass{
 class InitClass {
 	
 	// multiple instance initialisation block is executed on given order
-
 	{
 		System.out.println("Within instance initialisation Block 2");
 	}
@@ -48,12 +47,10 @@ class StaticClass{
 public class InitStaticBlockApp {
 	public static void main(String[] args) {
 		InitClass initClass1 = new InitClass();
-		InitClass initClass2 = new InitClass();
 		
 		ParentInitClass parentInitClass1 = new ParentInitClass();
 
 		StaticClass staticClass1 = new StaticClass();
-		StaticClass staticClass2 = new StaticClass();
 		
 	}
 }
