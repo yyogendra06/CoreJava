@@ -24,11 +24,16 @@ public class ClassWithoutInterfaceMethodImplApp extends ClassWithoutInterfaceMet
 		ClassWithoutInterfaceMethodImp withoutInterfaceMethodImp = new ClassWithoutInterfaceMethodImplApp();
 		withoutInterfaceMethodImp.print();
 
-		// by default it is final
-//		a = 20;
-		System.out.println(a);
-		withoutInterfaceMethodImp.printWithBody();
-		Interface1.printWithBodyStatic();
+		// by default it is final and static
+		System.out.println(Interface1.defaultVariable);
+		System.out.println(Interface1.finalVariable);
+		System.out.println(Interface1.staticVariable);
+
+		// method with default can be overridden
+		withoutInterfaceMethodImp.defaultMethodInterface();
+
+		// unable to Override the static methods
+		Interface1.staticMethodInterface();
 
 	}
 
@@ -38,8 +43,8 @@ public class ClassWithoutInterfaceMethodImplApp extends ClassWithoutInterfaceMet
 	}
 
 	@Override
-	public void printWithBody() {
-		System.out.println("Inside ClassWithoutInterfaceMethodImplApp printWithBody()");
+	public void defaultMethodInterface() {
+		System.out.println("Inside ClassWithoutInterfaceMethodImplApp defaultMethodInterface()");
 	}
 
 }

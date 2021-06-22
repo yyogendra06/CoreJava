@@ -1,56 +1,48 @@
 package in.basic;
 
-class ParentInitClass extends InitClass{
-	{
-		System.out.println("Within Parent Init class iib 1");
-	}
-	
-	public ParentInitClass() {
-		System.out.println("Inside pi class ctor");
-	}
-}
-
+/**
+ * From below Code explains that static block has higher priority than instance
+ * instance initialisation block and execute when first object is created
+ * 
+ * and iis block has highest priority than constructor call
+ * 
+ * @author yogi
+ *
+ */
 class InitClass {
-	
-	// multiple instance initialisation block is executed on given order
+
+	// This will execute before constructor call
 	{
-		System.out.println("Within instance initialisation Block 2");
+		System.out.println("InitClass IIS Block 1");
 	}
-	{
-		System.out.println("Within instance initialisation Block 1");
+
+	// Static block executes before IIS block and once only for that class
+	static {
+		System.out.println("InitClass Static Block 1");
 	}
 
 	public InitClass() {
-		System.out.println("INSIDE NON ARG Constructor");
+		System.out.println("InitClass NON ARG Constructor");
 	}
 
 }
 
-class StaticClass{
-	static {
-		System.out.println("INSIDE static Block 1");
+class ParentInitClass extends InitClass {
+	{
+		System.out.println("ParentInitClass class iib 1");
 	}
-	
-	static {
-		System.out.println("INSIDE static Block 3");
-	}
-	
-	static {
-		System.out.println("INSIDE static Block 2");
-	}
-	
-	public StaticClass() {
-		System.out.println("INSIDE NON ARG Constructor");
+
+	public ParentInitClass() {
+		System.out.println("ParentInitClass pi class ctor");
 	}
 }
 
 public class InitStaticBlockApp {
 	public static void main(String[] args) {
 		InitClass initClass1 = new InitClass();
-		
+		System.out.println();
+
 		ParentInitClass parentInitClass1 = new ParentInitClass();
 
-		StaticClass staticClass1 = new StaticClass();
-		
 	}
 }

@@ -2,15 +2,17 @@ package in.objects.interfaceexamples;
 
 public interface Interface1 {
 
-	int a = 10;
+	int defaultVariable = 10;
+	final int finalVariable = 20;
+	static int staticVariable = 30;
 
 	void print();
 
-	default void printWithBody() {
-		System.out.println("default printWithBody");
+	default void defaultMethodInterface() {
+		System.out.println("defaultMethodInterface()");
 	}
 
-	static void printWithBodyStatic() {
-		System.out.println("static printWithBodyStatic");
+	static void staticMethodInterface() {
+		System.out.println("staticMethodInterface()");
 	}
 }
