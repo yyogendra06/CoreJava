@@ -1,4 +1,4 @@
-package in.interfaceexamples;
+package in.objects.interfaceexamples;
 
 public class MultipleInterfaceSameMethodApp implements Interface1,Interface2{
 

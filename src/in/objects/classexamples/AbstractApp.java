@@ -1,9 +1,11 @@
-package in.classexamples;
+package in.objects.classexamples;
 
 abstract class AbstractClass {
 	public void nonAbstractDisplay() {
-		System.out.println("Inside nonAbstractDisplay");
+		System.out.println("Inside nonAbstractDisplay()");
 	}
+
+	public abstract void abstractDisplay();
 }
 
 /**
@@ -12,6 +14,11 @@ abstract class AbstractClass {
  * @author yogi
  */
 class AbstractClassImpl extends AbstractClass {
+
+	@Override
+	public void abstractDisplay() {
+		System.out.println("Inside abstractDisplay()");
+	}
 
 }
 
@@ -24,6 +31,7 @@ public class AbstractApp {
 
 		AbstractClass abstractApp = new AbstractClassImpl();
 		abstractApp.nonAbstractDisplay();
+		abstractApp.abstractDisplay();
 	}
 
 }
