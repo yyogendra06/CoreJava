@@ -7,7 +7,6 @@ public class FinallyExceptionApp {
 	}
 
 	static Object returnObject() {
-
 		try {
 			System.out.println("try");
 //			System.exit(0);
@@ -15,10 +14,11 @@ public class FinallyExceptionApp {
 //			return new Integer(0);
 		} catch (Exception e) {
 			System.out.println("Catch");
-			return new Float(0.0);
+			return 0;
 		} finally {
 			System.out.println("finally");
 //			return new String("Helll");
+			return 1;
 		}
 	}
 }

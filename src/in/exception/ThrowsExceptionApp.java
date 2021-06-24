@@ -19,6 +19,10 @@ public class ThrowsExceptionApp {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
+
+		// This will throws error while compliation so Unbale to execute whole Code so
+		// its is clear that checked exception generate Complile Time exception
+//		FileInputStream fileInputStream = new FileInputStream("c:/abc.txt");
 	}
 
 }
