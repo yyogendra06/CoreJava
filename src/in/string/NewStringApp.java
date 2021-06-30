@@ -13,5 +13,11 @@ public class NewStringApp {
 
 		System.out.println("str3 == str4 " + (str3 == str4));
 		System.out.println("str3 == str5 " + (str3 == str5));
+
+		String[] arrString = { "s1" };
+		String[] arrString2 = { "s1" };
+
+		System.out.println("arrString == arrString2 " + (arrString == arrString2));
+		System.out.println(arrString);
 	}
 }

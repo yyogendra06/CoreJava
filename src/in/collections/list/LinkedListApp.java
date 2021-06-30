@@ -12,16 +12,16 @@ public class LinkedListApp {
 		list.add(30);
 		list.add(null);
 		list.add(null);
-		
-		list.remove();
-		list.remove(2);
+
+		System.out.println(list.remove(2));
+		System.out.println(list.remove());
 
 		System.out.println(list);
-		
+
 		AbstractSequentialList<Integer> abstractSequentialList = new LinkedList<>();
 		abstractSequentialList.add(1);
 		abstractSequentialList.remove(0);
-		
+
 		System.out.println(abstractSequentialList);
 	}
 }
