@@ -22,7 +22,7 @@ class TotalEarningCommunication implements Runnable {
 
 			// this will make main thread which is waiting to wake and release
 			// this lock
-			for (int i = 0; i <= 10000; i++) {
+			for (int i = 0; i <= 100000; i++) {
 				total = 100 + i;
 			}
 			this.notify();

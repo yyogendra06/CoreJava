@@ -31,6 +31,7 @@ public class AnagramApp {
 	}
 
 	public static void groupingBasedOnAnagarm(List<String> list) {
+
 		Set<String> set = list.stream().collect(Collectors.toSet());
 
 		Function<String, String> anagram = (e) -> e.toString();

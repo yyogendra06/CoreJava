@@ -10,11 +10,12 @@ public class LinkedListApp {
 		list.add(10);
 		list.add(20);
 		list.add(30);
+		list.add(1, 40);
 		list.add(null);
 		list.add(null);
 
-		System.out.println(list.remove(2));
-		System.out.println(list.remove());
+//		System.out.println(list.remove(2));
+//		System.out.println(list.remove());
 
 		System.out.println(list);
 

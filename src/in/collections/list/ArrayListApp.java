@@ -8,12 +8,12 @@ import java.util.concurrent.Executors;
 
 public class ArrayListApp {
 	public static void main(String[] args) {
-		List<Integer> list = new ArrayList<>();
+		ArrayList<Integer> list = new ArrayList<>();
 
 		list.add(10);
 		list.add(20);
 		list.add(1, 30);
-		list.add(null);
+		list.add(1, null);
 		list.add(null);
 
 		System.out.println(list);
@@ -25,15 +25,15 @@ public class ArrayListApp {
 			executorService.execute(new Runnable() {
 				@Override
 				public void run() {
-					for (int i = 0; i < 1000; i++) {
-						list2.add(60);
+					for (int i = 0; i < 10; i++) {
+						list2.add(i);
 					}
 				}
 			});
 		}
-		
+
 		// This will gives error i guess cloning was done
-		// below will gives error 
+		// below will gives error
 //		System.out.println(list);
 		System.out.println(list2);
 	}

@@ -1,10 +1,12 @@
 package in.basic;
 
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class PrimeNumberApp {
 	public static void main(String[] args) {
 		printPrimeNumber(20);
+//		System.out.println(IntStream.rangeClosed(0, 10).boxed().collect(Collectors.toList()));
 	}
 
 	static void printPrimeNumber(int number) {

@@ -18,11 +18,16 @@ class InitClass {
 
 	// Static block executes before IIS block and once only for that class
 	static {
+		print();
 		System.out.println("InitClass Static Block 1");
 	}
 
 	public InitClass() {
 		System.out.println("InitClass NON ARG Constructor");
+	}
+
+	static void print() {
+		System.out.println("PRint Metohd static");
 	}
 
 }

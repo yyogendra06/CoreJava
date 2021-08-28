@@ -8,6 +8,10 @@ class Test {
 		return privateCount;
 	}
 
+	public static int getCount(int i) {
+		return privateCount;
+	}
+
 	public static void setCount(int count) {
 		Test.privateCount = count;
 	}
