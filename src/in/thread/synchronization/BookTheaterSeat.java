@@ -73,6 +73,7 @@ class MovieTheater implements Runnable {
 		this.seats = seats;
 	}
 
+	@Override
 	public void run() {
 		bookTheaterSeat.bookSeat(seats);
 		System.out.println("");

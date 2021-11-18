@@ -3,7 +3,6 @@ package in.stream.intstream;
 import java.util.IntSummaryStatistics;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 
 public class IntStreamArrayOperationApp {

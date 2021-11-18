@@ -27,14 +27,14 @@ class InitClass {
 	}
 
 	static void print() {
-		System.out.println("PRint Metohd static");
+		System.out.println("PRint Method static");
 	}
 
 }
 
 class ParentInitClass extends InitClass {
 	{
-		System.out.println("ParentInitClass class iib 1");
+		System.out.println("ParentInitClass class IIB 1");
 	}
 
 	public ParentInitClass() {
@@ -45,6 +45,7 @@ class ParentInitClass extends InitClass {
 public class InitStaticBlockApp {
 	public static void main(String[] args) {
 		InitClass initClass1 = new InitClass();
+
 		System.out.println();
 
 		ParentInitClass parentInitClass1 = new ParentInitClass();

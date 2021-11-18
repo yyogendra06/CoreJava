@@ -1,9 +1,6 @@
 package in.function;
 
 import java.util.function.BiConsumer;
-import java.util.function.Consumer;
-
-import in.function._Consumer.ConsumerModel;
 
 public class _BiConsumer {
 	public static void main(String[] args) {

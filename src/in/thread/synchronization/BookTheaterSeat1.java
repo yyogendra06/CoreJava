@@ -47,7 +47,7 @@ class MyThread1 implements Runnable {
 	@Override
 	public void run() {
 		// bookTheaterSeat1.bookSeat(seats);
-		bookTheaterSeat1.bookSeatStatic(seats);
+		BookTheaterSeat1.bookSeatStatic(seats);
 	}
 
 }
@@ -65,7 +65,7 @@ class MyThread2 implements Runnable {
 	@Override
 	public void run() {
 		// bookTheaterSeat1.bookSeat(seats);
-		bookTheaterSeat1.bookSeatStatic(seats);
+		BookTheaterSeat1.bookSeatStatic(seats);
 	}
 
 }

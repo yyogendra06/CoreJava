@@ -2,6 +2,7 @@ package in.exception;
 
 class FinalizeMethod {
 
+	@Override
 	protected void finalize() {
 		System.out.println("Inside Finalize");
 	}

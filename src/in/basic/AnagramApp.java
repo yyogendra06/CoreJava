@@ -46,5 +46,6 @@ public class AnagramApp {
 		List<String> list = new ArrayList<String>(Arrays.asList("dog", "cat", "god", "cat"));
 
 		System.out.println(isAnagram("dog", "god"));
+		groupingBasedOnAnagarm(list);
 	}
 }
