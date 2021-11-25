@@ -8,7 +8,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 public class CallableFutureApp {
-	public static void main(String[] args) throws InterruptedException, ExecutionException {
+	public static void main(String[] args)
+			throws InterruptedException, ExecutionException {
 
 		Callable<Integer> task = () -> {
 			return new Random().nextInt();

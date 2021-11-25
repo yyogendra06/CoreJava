@@ -22,27 +22,35 @@ public class ExecutorMethodApp {
 			fixedService.execute(Task);
 		}
 
-		System.out.println("before shutdown() fixedService.isShutdown() " + fixedService.isShutdown());
+		System.out.println("before shutdown() fixedService.isShutdown() "
+				+ fixedService.isShutdown());
 
-		// Send shutdown signal to executor after task completion it gets shutdown, if
-		// new task assigned after this RejectionExecutionException will Generated
+		// Send shutdown signal to executor after task completion it gets
+		// shutdown, if
+		// new task assigned after this RejectionExecutionException will
+		// Generated
 		fixedService.shutdown();
+		// fixedService.execute(Task);
 
 		// to check whether shutdown signal is given or not
-		System.out.println("after shutdown() fixedService.isShutdown() " + fixedService.isShutdown());
+		System.out.println("after shutdown() fixedService.isShutdown() "
+				+ fixedService.isShutdown());
 
 		// to know is executor terminated
-		System.out.println("fixedService.isTerminated() " + fixedService.isTerminated());
+		System.out.println(
+				"fixedService.isTerminated() " + fixedService.isTerminated());
 
 		Thread.sleep(300);
 
 		// Returns all pending task and immeditatily shutdown the executor
 		List<Runnable> queuedTask = fixedService.shutdownNow();
-		System.out.println("after shutdownNow() fixedService.isShutdown() " + fixedService.isShutdown());
+		System.out.println("after shutdownNow() fixedService.isShutdown() "
+				+ fixedService.isShutdown());
 		System.out.println("Count in Queued Task : " + queuedTask.size());
 
-		System.out.println("fixedService.isTerminated() " + fixedService.isTerminated());
-		
+		System.out.println(
+				"fixedService.isTerminated() " + fixedService.isTerminated());
+
 		// if terminated return true otherwise wait for given time
 		fixedService.awaitTermination(10, TimeUnit.SECONDS);
 	}
