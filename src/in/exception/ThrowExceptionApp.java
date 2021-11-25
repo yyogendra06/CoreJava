@@ -11,7 +11,7 @@ public class ThrowExceptionApp {
 		int a = 10, b = 0, c;
 
 		if (b == 0)
-			throw new DivideByZeroException("Unbale TO DIVIDE");
+			throw new DivideByZeroException("unable to divide");
 
 		System.out.println(a / b);
 	}

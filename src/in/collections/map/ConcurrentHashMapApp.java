@@ -13,7 +13,7 @@ public class ConcurrentHashMapApp {
 		ExecutorService executorService = Executors.newFixedThreadPool(10);
 		for (int i = 0; i < 10; i++) {
 			executorService.execute(() -> {
-				for (int j = 0; j < 10000; j++)
+				for (int j = 0; j < 1000; j++)
 					concurrentHashMap.put("A" + j, j);
 			});
 		}
@@ -23,12 +23,11 @@ public class ConcurrentHashMapApp {
 		ExecutorService executorService1 = Executors.newFixedThreadPool(10);
 		for (int i = 0; i < 10; i++) {
 			executorService1.execute(() -> {
-				for (int j = 0; j < 10000; j++) {
-					map.put("A" + j, j);
+				for (int j = 0; j < 1000; j++) {
+					map.put("B" + j, j);
 				}
 			});
 		}
 		System.out.println(map);
-
 	}
 }

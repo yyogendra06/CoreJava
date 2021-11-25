@@ -30,10 +30,10 @@ public class StaticBindingApp {
 
 		subclass sub1 = new subclass();
 
-		superclass.print();
-		superclass.print();
+		sup.print();
+		sub.print();
 
-		subclass.print();
+		sub1.print();
 
 	}
 }

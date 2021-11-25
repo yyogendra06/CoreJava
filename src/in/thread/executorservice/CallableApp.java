@@ -6,7 +6,8 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
 public class CallableApp {
-	public static void main(String[] args) throws InterruptedException, ExecutionException {
+	public static void main(String[] args)
+			throws InterruptedException, ExecutionException {
 		Callable<Integer> callable = () -> {
 			return new Random().nextInt(100);
 		};
@@ -15,11 +16,12 @@ public class CallableApp {
 		Thread thread = new Thread(future);
 		thread.start();
 
-		Thread threadFuture = new Thread(future);
+		FutureTask<Integer> future1 = new FutureTask<>(callable);
+		Thread threadFuture = new Thread(future1);
 		threadFuture.start();
 		System.out.println(future.get());
 
-		System.out.println(future.get());
+		System.out.println(future1.get());
 	}
 
 };

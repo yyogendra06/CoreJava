@@ -9,15 +9,15 @@ public class FinallyExceptionApp {
 	static Object returnObject() {
 		try {
 			System.out.println("try");
-//			System.exit(0);
+			// System.exit(0);
 			throw new Exception();
-//			return new Integer(0);
+			// return new Integer(0);
 		} catch (Exception e) {
 			System.out.println("Catch");
 			return 0;
 		} finally {
 			System.out.println("finally");
-//			return new String("Helll");
+			// return new String("Helll");
 			return 1;
 		}
 	}

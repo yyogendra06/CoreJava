@@ -9,7 +9,7 @@ public class TryCatch {
 		try {
 			System.out.println(a / b);
 		}
-		// no use if catch withour try
+		// no use if catch without try
 		catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
