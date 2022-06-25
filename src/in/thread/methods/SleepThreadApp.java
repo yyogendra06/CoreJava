@@ -18,8 +18,9 @@ class SleepThread implements Runnable {
 
 public class SleepThreadApp {
 	public static void main(String[] args) {
-		 Thread sleepThread = new Thread(new SleepThread());
-		 sleepThread.start();
+		Thread sleepThread = new Thread(new SleepThread());
+		sleepThread.setName("Sleep Thread");
+		sleepThread.start();
 
 		Runnable unlimitedRunnable = () -> {
 			System.out.println(Thread.currentThread().getName());
@@ -29,7 +30,6 @@ public class SleepThreadApp {
 
 		Thread unlimitedThread = new Thread(unlimitedRunnable);
 		unlimitedThread.start();
-
 
 	}
 }

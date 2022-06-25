@@ -10,8 +10,7 @@ public class InterruptedApp {
 
 			try {
 				for (int i = 0; i < 5; i++) {
-					System.out.println(
-							Thread.currentThread().getName() + " - interrupted() : " + i);
+					System.out.println(Thread.currentThread().getName() + " - interrupted() : " + i);
 					Thread.sleep(1000);
 					System.out.println(Thread.interrupted());
 				}
@@ -29,8 +28,7 @@ public class InterruptedApp {
 
 			try {
 				for (int i = 0; i < 5; i++) {
-					System.out.println(
-							Thread.currentThread().getName() + "  - isInterrupted() : " + i);
+					System.out.println(Thread.currentThread().getName() + "  - isInterrupted() : " + i);
 					Thread.sleep(1000);
 					System.out.println(Thread.currentThread().isInterrupted());
 				}

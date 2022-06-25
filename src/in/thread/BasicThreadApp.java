@@ -4,8 +4,7 @@ class Task implements Runnable {
 
 	@Override
 	public void run() {
-		System.out.println(Thread.currentThread().getName());
-		System.out.println("TAsk Thread");
+		BasicThreadApp.printThread();
 	}
 
 }
@@ -13,7 +12,7 @@ class Task implements Runnable {
 public class BasicThreadApp {
 	public static void main(String[] args) {
 		System.out.println("IN MAIN");
-		System.out.println(Thread.currentThread().getName());
+		BasicThreadApp.printThread();
 
 		// running Task thread directly
 		new Thread(new Task()).start();
@@ -22,8 +21,11 @@ public class BasicThreadApp {
 		new Thread(new Task()).start();
 
 		Thread.currentThread().setName("MAin Thread Name Updated");
-		System.out.println(Thread.currentThread().getName() + "->"
-				+ Thread.currentThread().isAlive());
+		System.out.println(Thread.currentThread().getName() + "->" + Thread.currentThread().isAlive());
 
+	}
+
+	static void printThread() {
+		System.out.println("Task Thread : " + Thread.currentThread().getName());
 	}
 }
