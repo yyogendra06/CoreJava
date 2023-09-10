@@ -1,5 +1,8 @@
 package in.thread.methods;
 
+/**
+ * Interrupt method use to stop the thread from executing current task.
+ */
 public class InterruptApp {
 	public static void main(String[] args) {
 		Runnable runnable = () -> {
@@ -14,6 +17,7 @@ public class InterruptApp {
 		};
 
 		Thread interruptThread = new Thread(runnable);
+		interruptThread.setName("Interrupted Thread");
 		interruptThread.start();
 		interruptThread.interrupt();
 
@@ -26,6 +30,7 @@ public class InterruptApp {
 		};
 
 		Thread nonWaitingThread = new Thread(nonWaitinhgRunnable);
+		nonWaitingThread.setName("Not Waiting Thread");
 		nonWaitingThread.start();
 		nonWaitingThread.interrupt();
 	}
