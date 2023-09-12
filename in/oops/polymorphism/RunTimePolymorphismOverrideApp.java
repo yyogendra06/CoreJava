@@ -1,8 +1,8 @@
 package in.oops.polymorphism;
 
-import in.oops.polymorphism.model.Employee;
-import in.oops.polymorphism.model.Father;
-import in.oops.polymorphism.model.Person;
+import in.model.Employee;
+import in.model.Father;
+import in.model.Person;
 
 /**
  * This will let us know that how java is working in inheritance
